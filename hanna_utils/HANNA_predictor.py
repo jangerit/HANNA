@@ -4,7 +4,7 @@ import pandas as pd
 from typing import Union, List
 
 from models.HANNA.HANNA import get_smiles_embedding, initialize_ChemBERTA
-from utils.utils import load_ensemble
+from hanna_utils.utils import load_ensemble
 
 import contextlib
 import io
@@ -20,8 +20,8 @@ def nostdout():
 # Constants
 MAX_LENGTH = 512
 DEFAULT_ENSEMBLE_PATH = 'models/HANNA/ensemble'
-TEMPERATURE_SCALER_PATH = 'utils/scalers/temperature_scaler.pkl'
-BERT_SCALER_PATH = 'utils/scalers/bert_scaler.pkl'
+TEMPERATURE_SCALER_PATH = 'hanna_utils/scalers/temperature_scaler.pkl'
+BERT_SCALER_PATH = 'hanna_utils/scalers/bert_scaler.pkl'
 
 class HANNA_Predictor:
     """
